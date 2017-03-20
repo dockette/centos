@@ -9,7 +9,7 @@ ENV USER_NAME dfx
 RUN yum update -y && \
     yum upgrade -y && \
     useradd -ms /bin/bash -u $USER_UID $USER_NAME && \
-    yum clean all && yum autoremove -y && \
+    yum clean all && \
     rm -rf /tmp/* /var/tmp/*
 
 CMD ["/bin/bash"]
